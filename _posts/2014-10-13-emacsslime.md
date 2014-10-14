@@ -10,7 +10,7 @@ tags: []
 # The largest heading
 > You can indicate blockquotes with a `>
 
-**this text is bold**
+**this text is bold**œ
 
 *this text is italic*
 
