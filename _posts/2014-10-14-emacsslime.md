@@ -21,25 +21,22 @@ tags: []
 ###Slime配置
 文档中有详细的配置说明,不赘述. 这里说一下我遇到的问题.
 
-; slime setup
-
-(setq inferior-lisp-program "/usr/local/Cellar/sbcl/1.1.18/bin/sbcl")
-
-(add-to-list 'load-path "~/.emacs.d/slime/")
-
-(require 'slime)
-
-(slime-setup)
+	; slime setup
+	(setq inferior-lisp-program "/usr/local/Cellar/sbcl/1.1.18/bin/sbcl")
+	(add-to-list 'load-path "~/.emacs.d/slime/")
+	(require 'slime)
+	(slime-setup)
 
 注意inferior-lisp-program指向的sbcl必须是可执行文件.我一开始配置为sbcl的安装目录, 结果启动emacs时会报错"xxxx是目录".
 
 配置完成后, 在emacs中输入M-x slime启动.
 如果想打开lisp文件时自动加载slime, 输入以下配置:
->; auto load slime when open a lisp file.
->(add-hook 'slime-mode-hook
->          (lambda ()
->            (unless (slime-connected-p)
->              (save-excursion (slime)))))
+
+	; auto load slime when open a lisp
+	(add-hook 'slime-mode-hook
+		(lambda ()
+            (unless (slime-connected-p)
+              (save-excursion (slime)))))
 
 
 
