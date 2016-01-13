@@ -18,9 +18,8 @@ Thanks kelvin!
    put the config file under ~/ssh
 
 
-###=================================================
-git proxy config
-###=================================================
+##git proxy config
+
 ProxyCommand connect -H web-proxy.oa.com:8080 %h %p
 
 Host github.com
